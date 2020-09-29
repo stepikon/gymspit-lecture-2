@@ -1,5 +1,7 @@
 ﻿//added Dump and IsEmpty methods to MyList and MyLinkedList
 //added Clear methods to queue and stack
+//added Contains method for q and s.
+//added FirstIndexOf method for stack
 using System;
 
 
@@ -38,8 +40,8 @@ namespace Lecture4
 				Console.WriteLine(intList.Get(i));
 			}
 
-			list.Dump();
-			intList.Dump();
+			list.Clear();
+			intList.Clear();
 			//Console.WriteLine(list.Get(0)); - throws an Exception
 			//Console.WriteLine(intList.Get(0)); - throws an Exception
 			Console.WriteLine("Empty: " + list.IsEmpty());
@@ -55,7 +57,7 @@ namespace Lecture4
 				Console.WriteLine(node.Item);
 			}
 
-			linkList.Dump();
+			linkList.Clear();
 			Console.WriteLine("empty: {0}", linkList.IsEmpty());
 
 			MyQueue<string> queue = new MyQueue<string>();
