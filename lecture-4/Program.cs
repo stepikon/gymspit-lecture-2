@@ -2,6 +2,7 @@
 //added Clear methods to queue and stack
 //added Contains method for q and s.
 //added FirstIndexOf method for stack
+//added EasierQueue class
 using System;
 
 
@@ -99,14 +100,32 @@ namespace Lecture4
 			stack.Push("Hello");
 			stack.Push("there");
 			Console.WriteLine(stack.Peek());
-			Console.WriteLine(stack.Contains("Hello"));
-			Console.WriteLine(stack.Contains("Memes"));
-			Console.WriteLine(stack.FirstIndexOf("Hello"));
-			Console.WriteLine(stack.FirstIndexOf("Memes"));
+			Console.WriteLine("Contains " + stack.Contains("Hello"));
+			Console.WriteLine("Contains " + stack.Contains("Memes"));
+			Console.WriteLine("FirstIndexOf " + stack.FirstIndexOf("Hello"));
+			Console.WriteLine("FirstIndexOf " + stack.FirstIndexOf("Memes"));
 			while (!stack.IsEmpty())
 			{
 				Console.WriteLine(stack.Pop());
 			}
+
+			EasierQueue<int> eq = new EasierQueue<int>();
+			eq.Enqueue(1);
+			eq.Enqueue(12);
+			eq.Enqueue(23);
+			eq.Enqueue(34);
+			eq.Enqueue(69);
+			eq.Enqueue(77);
+			while (!eq.IsEmpty())
+			{
+				Console.WriteLine(eq.Dequeue());
+			}
+			eq.Enqueue(34);
+			eq.Enqueue(69);
+			Console.WriteLine("Contains " + eq.Contains(69));
+			Console.WriteLine("Contains " + eq.Contains(2));
+			Console.WriteLine("FirstIndexOf " + eq.FirstIndexOf(69));
+			Console.WriteLine("FirstIndexOf " + eq.FirstIndexOf(2));
 
 			Console.ReadKey();
 		}

@@ -86,7 +86,7 @@ namespace Lecture4
 		}
 
 
-		public void Dump()
+		public void Clear()
 		{
 			first = null;
 			last = null;

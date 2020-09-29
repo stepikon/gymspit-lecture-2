@@ -49,7 +49,7 @@ namespace Lecture4
 		}
 
 
-		public void Dump()
+		public void Clear()
 		{
 			for (int i = 0; i < items.Length; i++)
 			{
