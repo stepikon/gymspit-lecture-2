@@ -74,6 +74,8 @@ namespace Lecture4
 			queue.Enqueue("Hello");
 			queue.Enqueue("there");
 			Console.WriteLine(queue.Peek());
+			Console.WriteLine("Contains: " + queue.Contains("Hello"));
+			Console.WriteLine("Contains: " + queue.Contains("Memes"));
 			while (!queue.IsEmpty())
 			{
 				Console.WriteLine(queue.Dequeue());
@@ -95,6 +97,10 @@ namespace Lecture4
 			stack.Push("Hello");
 			stack.Push("there");
 			Console.WriteLine(stack.Peek());
+			Console.WriteLine(stack.Contains("Hello"));
+			Console.WriteLine(stack.Contains("Memes"));
+			Console.WriteLine(stack.FirstIndexOf("Hello"));
+			Console.WriteLine(stack.FirstIndexOf("Memes"));
 			while (!stack.IsEmpty())
 			{
 				Console.WriteLine(stack.Pop());

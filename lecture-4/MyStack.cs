@@ -63,6 +63,26 @@ namespace Lecture4
 		}
 
 
+		public int FirstIndexOf(T item)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				if (items[i].Equals(item))
+				{
+					return i;
+				}
+			}
+
+			return -1;
+		}
+
+
+		public bool Contains(T item)
+		{
+			return FirstIndexOf(item) >= 0;
+		}
+
+
 		public bool IsEmpty()
 		{
 			return !(count > 0);

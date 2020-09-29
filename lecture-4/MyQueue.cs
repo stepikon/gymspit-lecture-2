@@ -70,6 +70,20 @@ namespace Lecture4
 		}
 
 
+		public bool Contains(T item)
+		{
+			for (MyQueueNode node = first; node!=null; node = node.Next)
+			{
+				if (node.Item.Equals(item))
+				{
+					return true;
+				}
+			}
+
+			return false;
+		}
+
+
 		public bool IsEmpty()
 		{
 			return first == null;
