@@ -36,6 +36,12 @@ namespace Lecture4
 		}
 
 
+		public bool Empty()
+		{
+			return count == 0;
+		}
+
+
 		public void AddFirst(T item)
 		{
 			MyListNode node = new MyListNode(item);
@@ -77,6 +83,14 @@ namespace Lecture4
 		public int Count()
 		{
 			return count;
+		}
+
+
+		public void Dump()
+		{
+			first = null;
+			last = null;
+			count = 0;
 		}
 	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿//added Dump and Empty methods to MyList and MyLinkedList
+using System;
 
 
 namespace Lecture4
@@ -36,6 +37,13 @@ namespace Lecture4
 				Console.WriteLine(intList.Get(i));
 			}
 
+			list.Dump();
+			intList.Dump();
+			//Console.WriteLine(list.Get(0)); - throws an Exception
+			//Console.WriteLine(intList.Get(0)); - throws an Exception
+			Console.WriteLine("Empty: " + list.Empty());
+			Console.WriteLine("Empty: " + intList.Empty());
+
 			MyLinkedList<int> linkList = new MyLinkedList<int>();
 			linkList.AddFirst(1);
 			linkList.AddLast(3);
@@ -45,6 +53,9 @@ namespace Lecture4
 			for (var node = linkList.GetFirst(); node != null; node = node.next) {
 				Console.WriteLine(node.Item);
 			}
+
+			linkList.Dump();
+			Console.WriteLine("empty: {0}", linkList.Empty());
 
 			MyQueue<string> queue = new MyQueue<string>();
 			queue.Enqueue("this");

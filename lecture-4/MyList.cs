@@ -25,6 +25,12 @@ namespace Lecture4
 		}
 
 
+		public bool Empty()
+		{
+			return count == 0;
+		}
+
+
 		public void Add(T item)
 		{
 			if (count >= capacity) {
@@ -40,6 +46,17 @@ namespace Lecture4
 		public int Count()
 		{
 			return count;
+		}
+
+
+		public void Dump()
+		{
+			for (int i = 0; i < items.Length; i++)
+			{
+				items[i] = default;
+			}
+
+			count = 0;
 		}
 	}
 }
