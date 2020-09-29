@@ -50,6 +50,19 @@ namespace Lecture4
 		}
 
 
+		public void Clear() 
+		{
+			for (int i = 0; i < items.Length; i++)
+			{
+				items[i] = default;
+			}
+
+			capacity = INITIAL_CAPACITY;
+			Array.Resize(ref items, capacity);
+			count = 0;
+		}
+
+
 		public bool IsEmpty()
 		{
 			return !(count > 0);

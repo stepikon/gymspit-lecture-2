@@ -36,7 +36,7 @@ namespace Lecture4
 		}
 
 
-		public bool Empty()
+		public bool IsEmpty()
 		{
 			return count == 0;
 		}

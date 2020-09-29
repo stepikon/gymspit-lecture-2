@@ -63,6 +63,13 @@ namespace Lecture4
 		}
 
 
+		public void Clear()
+		{
+			first = null;
+			last = null;
+		}
+
+
 		public bool IsEmpty()
 		{
 			return first == null;

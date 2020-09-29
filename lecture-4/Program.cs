@@ -1,4 +1,5 @@
-﻿//added Dump and Empty methods to MyList and MyLinkedList
+﻿//added Dump and IsEmpty methods to MyList and MyLinkedList
+//added Clear methods to queue and stack
 using System;
 
 
@@ -41,8 +42,8 @@ namespace Lecture4
 			intList.Dump();
 			//Console.WriteLine(list.Get(0)); - throws an Exception
 			//Console.WriteLine(intList.Get(0)); - throws an Exception
-			Console.WriteLine("Empty: " + list.Empty());
-			Console.WriteLine("Empty: " + intList.Empty());
+			Console.WriteLine("Empty: " + list.IsEmpty());
+			Console.WriteLine("Empty: " + intList.IsEmpty());
 
 			MyLinkedList<int> linkList = new MyLinkedList<int>();
 			linkList.AddFirst(1);
@@ -55,7 +56,7 @@ namespace Lecture4
 			}
 
 			linkList.Dump();
-			Console.WriteLine("empty: {0}", linkList.Empty());
+			Console.WriteLine("empty: {0}", linkList.IsEmpty());
 
 			MyQueue<string> queue = new MyQueue<string>();
 			queue.Enqueue("this");
@@ -65,6 +66,18 @@ namespace Lecture4
 			while (!queue.IsEmpty()) {
 				Console.WriteLine(queue.Dequeue());
 			}
+			queue.Clear();
+			while (!queue.IsEmpty())
+			{
+				Console.WriteLine(queue.Dequeue());
+			}
+			queue.Enqueue("Hello");
+			queue.Enqueue("there");
+			Console.WriteLine(queue.Peek());
+			while (!queue.IsEmpty())
+			{
+				Console.WriteLine(queue.Dequeue());
+			}
 
 			MyStack<string> stack = new MyStack<string>();
 			stack.Push("this");
@@ -72,6 +85,18 @@ namespace Lecture4
 			stack.Push("stack");
 			Console.WriteLine(stack.Peek());
 			while (!stack.IsEmpty()) {
+				Console.WriteLine(stack.Pop());
+			}
+			stack.Clear();
+			while (!stack.IsEmpty())
+			{
+				Console.WriteLine(stack.Pop());
+			}
+			stack.Push("Hello");
+			stack.Push("there");
+			Console.WriteLine(stack.Peek());
+			while (!stack.IsEmpty())
+			{
 				Console.WriteLine(stack.Pop());
 			}
 
